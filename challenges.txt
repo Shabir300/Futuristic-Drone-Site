@@ -1,0 +1,19 @@
+1)  how to clamp the left indent of the title DRONE.SERIES?
+
+2) how to make the drone GO UP with min or max or clamp when the window is
+getting bigger in width??
+
+3)  container_2 {
+    width: 100vw;  
+    /* WHY WIDTH: 100% DON'T WORK HERE AND THE CONTENT FLOWS OUT*/
+
+
+
+4) why is the grid images container flowing out of its parent container???
+
+
+5) why sometimes the font is availabe and upon importing makes the font-size bolder but sometimes its not???
+
+
+6) why is the width of the container not fixed??
+

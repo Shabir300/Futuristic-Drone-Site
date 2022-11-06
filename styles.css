@@ -1,0 +1,510 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+:root {
+    --primary-color: #7988BE;
+    --secondary-color: #6889FF;
+    --third-color: #363B4E;
+}
+
+img {
+    width: 100%;
+}
+
+.container_1 {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 100;
+    position: relative;
+}
+
+.container_1:after {
+    content: '';
+    background: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16vw;
+    height: 100%;
+    z-index: -10;
+}
+
+
+
+.container_1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 14.6vw;
+    background: url('./Rectangle\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70vw;
+    height: 100%;
+    z-index: -12;
+}
+
+
+.title {
+    position: absolute;
+    top: 0;
+    /* left: calc(1vw + 1rem);  */
+    left: min(3rem, min(5vw, 10vw));
+    background: black;
+    color: var(--secondary-color);
+    padding: .687rem;
+    margin-left: clamp(.5rem, -4rem + 10vw, 18rem); 
+    /* THIS WORKS BUT NEEDS UNDERSTANDING */
+    /* margin-left: min(3vw, max(20vw, 40vh)); */
+}
+
+.title span {
+    color: white;
+}
+
+
+nav {
+    z-index: 1000;
+    position: absolute;
+    width: 18rem;
+    height: 44rem;
+    background: var(--third-color);
+    padding-top: 6.18rem;
+    padding-right: 2.69rem;
+    text-align: right;
+    top: 5%;
+    right: 5%;
+    clip-path: circle(0% at 100% 0%);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding-bottom: 0.6875rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.56rem;
+    
+
+}
+
+.cross {
+    width: .8rem;
+    height: .8rem;
+    margin-bottom: 3rem;
+}
+
+.content {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 3rem;
+    width: 100vw;
+    height: 100%;
+    padding-top: 8.25rem;
+}
+
+.headline {
+    line-height: 90%;
+    font-weight: bolder;
+    text-align:center;
+    font-size: clamp(4rem, -0.9rem + 10vw, 8rem);
+    width: 100%;
+    padding-inline: 20%;
+    margin-top: max(5vh, 10vw);
+}
+
+.offer {
+    width: 100%;
+    padding-inline: 21%;
+    line-height: 150%;
+    text-align: center;
+    /* font-size: clamp(.2rem, -0.5rem + 6vw, 2rem); */
+    font-size: max(1.4vw, 1.5rem);
+    font-family: 'Montserrat';
+   
+}
+
+.menu-button {
+    background: none;
+    font-size: 2rem;
+    border: none;
+    z-index: 1000;
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+
+
+.drone {
+    position: absolute;
+    /* top: 70vh; */
+    /* top: clamp(70vh, 60vh, 30vw); */
+    /* top: max(37rem, 15%); */
+    top: calc(70vh - 5%);
+    left: 27vw;
+    background: url('./drone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 16rem; */
+    /* width: clamp(16rem, -0.5rem + 8vw, 22rem); */
+    width: 50vw;
+    /* height: 13rem; */
+    /* height: clamp(12rem, -0.5rem + 8vw, 19rem); */
+    /* height: max(1.2vw, 12rem); */
+    height: 40vw;
+}
+
+
+
+
+
+
+/* ------------- */
+/* CONTAINER 2 */
+/* ------------ */
+
+
+.container_2 {
+    width: 85%;  
+    /* WHY WIDTH: 100% DON'T WORK HERE AND THE CONTENT FLOWS OUT*/
+    height: 95vh;
+    background: url('./stadium.png');
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: cover;
+    position: relative;
+    margin-left: auto;
+    color: white;
+}
+
+.container_2-text {
+    position: absolute;
+    top: 20%;
+    padding-inline: 10%;
+    font-size: clamp(2.4rem, 2.5vw, 4vw );
+    margin-top: max(10%, 3vh);
+}
+
+.author {
+    position: relative;
+    /* font-size: clamp(1rem, 6vw, 10vw); */
+    font-size: calc(1vw + 1rem);
+    top: 60%;
+    left: max(15%, 2.5rem);
+    margin-top: 5%;
+    /* padding-left: 3.5rem; */
+    padding-left: calc(3rem + 1.7%);
+    font-style: italic;
+}
+
+
+.author:before {
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid white;
+    width: calc(1.5vw + 2rem);
+    top: 40%;
+    left: 0;
+
+}
+
+.container_3 {
+    width: 100%;
+    height: 100vh;
+    padding-left: 4.5rem;
+    padding-top: 3.3rem;
+}
+
+.container_3-title {
+    font-size: 2.25rem;
+}
+
+.container_3-description {
+    padding-top: 2.4rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    font-family: 'Montserrat';
+    /* font-style: normal; */
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 141.6%;
+    text-align: left;
+}
+
+
+
+.container_3-gallery {
+    /* display: block; */
+    position: absolute;
+    /* width: 85%; */
+    width: calc(40% + 12rem);
+    /* height: 100vw; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+    /* grid-template-areas: '. 1 2'
+                         '3 4 .'
+                         '. 5 .'; */
+    
+}
+
+
+.image-1 {
+    grid-column: 2 / 3 ;
+    grid-row: 1 / 2;
+}
+
+.image-2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+
+.image-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.image-4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.image-5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+
+
+
+/* ---------- */
+/* REGISTERATION */
+/* ----------- */
+
+
+.registeration {
+    position: absolute;
+    background: #B2DD9E;
+    width: 100%;
+    height: 40.6rem;
+    
+}
+
+
+.registeration-header {
+    background: rgba(0, 0, 0, 0.1);
+    width: clamp(25rem, 65vw, 40%);
+    height: 5.375rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.inputs-container label {
+    width: 30%;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.input {
+    /* padding: 2rem 4rem; */
+    padding-block: 2rem;
+    width: clamp(20rem, 30rem, 50%);
+}
+
+.input * {
+    display: block;
+}
+
+.inputs-container {
+    display: grid;
+    place-items: center;
+    text-align: left;
+
+}
+
+.inputs-container input {
+    width: 100%;
+    padding: 1rem;
+    padding-block: 1.4rem;
+    border: none;
+    font-size: 1.5rem;
+}
+
+
+.registeration-button {
+    background: black;
+    color: white;
+    width: clamp(20rem, 30rem, 50%);
+    padding-block: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.contact {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding-block: 1rem;
+}
+
+.contact p {
+    position: relative;
+    text-align: center;
+    margin-block: .5rem;
+}
+
+/* .contact  p:after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid black;
+    width: 180px;
+    top: 100%;
+    left: 0;
+}
+ */
+
+
+.email {
+    text-transform: lowercase;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+
+    .container_1:before {
+        background-position-y: 50%;
+    }
+
+    .container_1:after {
+        width: 40vw;
+    }
+
+
+    .headline {
+        text-align: left;
+        padding: unset;
+        padding-right: 55%;
+        padding-left: 5%;
+        padding-top: 0;
+    }
+
+
+    .offer {
+        padding: unset;
+        padding-left: 5%;
+        padding-right: 70%;
+    }
+
+    .drone {
+        background-size: cover;
+        top: 20%;
+        left: 50%;
+        width: 484px;
+        height: 362px;
+        
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav {
+       
+        /* width: fit-content;
+        height: fit-content; */
+        top: 2%;
+        clip-path: unset;
+        background: none;
+    }
+
+    ul {
+        position: absolute;
+        top: 0;
+        right: 5vw;
+        display: flex;
+        gap: 6rem;
+    }
+
+    .cross {
+        display: none;
+    }
+
+
+    /* CONTAINER 3 */
+
+    .container_3 {
+        display: flex;
+        gap: 0;
+    }
+
+    .container_3-content {
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+    }
+
+    .container_3-title {
+        /* font-size: 97px; */
+        font-size: calc(5vw + 1rem);
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        
+    }
+
+    .container_3-description {
+        width: 35rem;
+        text-align: left;
+        font-size: 2rem;
+        font-weight: lighter;
+        line-height: 190%;
+        /* margin: 0; */
+        /* padding: 0; */
+    }
+
+
+    .container_3-gallery {
+        position: absolute;
+        width: 50%;
+        top: 210vh;
+        right: 5vw;
+        padding: 0;
+        margin-top: -10rem;
+    }
+    
+    .registeration-header {
+        margin-left: 25vw;
+    }
+
+
+
+
+}
